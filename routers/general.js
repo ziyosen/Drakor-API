@@ -42,7 +42,7 @@ router.get('/page/:pagination', async (req, res, next) => {
             const link = $(e).find('.post-thumbnail');
             data.link = {
                 url: link.find('a').attr('href'),
-                endpoint: link.find('a').attr('href').replace('https://ratudrakor.co/', ''),
+                endpoint: link.find('a').attr('href').replace('https://drama-id.com/', ''),
                 thumbnail: link.find('img').attr('src')
             };
 
@@ -153,7 +153,7 @@ router.get('/genres/:genre/page/:page', async (req, res, next) => {
             const link = $(e).find('.post-thumbnail');
             data.link = {
                 url: link.find('a').attr('href'),
-                endpoint: link.find('a').attr('href').replace('https://ratudrakor.co/', ''),
+                endpoint: link.find('a').attr('href').replace('https://drama-id.com/', ''),
                 thumbnail: link.find('img').attr('src')
             };
 
@@ -185,7 +185,7 @@ router.get('/recent', async (req, res, next) => {
             const info = $(e).find('a');
             data.title = info.text().replace('Drama Korea', '');
             data.link = info.attr('href');
-            data.endpoint = info.attr('href').replace('https://ratudrakor.co/', '');
+            data.endpoint = info.attr('href').replace('https://drama-id.com/', '');
 
             data_list.push(data);
         });
@@ -220,7 +220,7 @@ router.get('/cari/:query', async (req, res, next) => {
             const link = $(e).find('.post-thumbnail > a').attr('href');
             data.link = {
                 url: link,
-                endpoint: link.replace('https://ratudrakor.co/', ''),
+                endpoint: link.replace('https://drama-id.com/', ''),
                 thumbnail: $(e).find('img').attr('src')
             }
 
